@@ -1,7 +1,10 @@
 import streamlit as st
 import os
 import uuid
+import sys
 
+# Add project root to Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from processors.document_processor import process_document
 from processors.json_processor import process_json
